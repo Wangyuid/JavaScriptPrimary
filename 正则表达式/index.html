@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //表达式两种写法
+        //1.普通方式 附加参数g i m 
+        // var reg = /dog/g
+        //2.构造函数方式
+        // var reg2 = new RegExp("dog", "g")
+        //正则表达式操作方法
+        // 1.compile
+        var str = "every man in the world , every woman in the world"
+        var patt = /man/g
+        var str2 = str.replace(patt,"person")
+        console.log(str2);
+        patt = /(wo)?man/g
+        patt.compile(patt)
+        str2 = str2.replace(patt,"person")
+        console.log(str2);
+        // 2.exec()
+        // 3.test()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>制作八行八列棋盘</title>
+</head>
+
+<body>
+    <script>
+        document.writeln("<table width='200' height='200' border='1'>");
+        for (var i = 1; i <= 8; i++) {
+            document.writeln("<tr>");
+            for (var j = 1; j <= 8; j++) {
+                color = "#fafafa";
+                if ((i + j) % 2 == 0) {
+                    color = "#212121";
+                }
+                document.writeln("<td bgcolor='" + color + "'></td>");
+            }
+            document.writeln("</tr>");
+        }
+        document.writeln("</table>");
+    </script>
+
+</body>
+
+</html>

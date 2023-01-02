@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书管理系统</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url(./images/登陆页面背景图.webp);
+            background-repeat: no-repeat;
+            background-position: 3% 106%;
+        }
+
+        .main {
+            width: 300px;
+            height: 250px;
+            background-color: rgba(128, 116, 116, 0.3);
+            border-radius: 20px;
+            margin: 200px auto;
+        }
+
+        h2 {
+            padding-top: 10px;
+            text-align: center;
+            letter-spacing: 3px;
+        }
+
+        input {
+            width: 200px;
+            height: 30px;
+            margin: 20px auto;
+            border-radius: 5px;
+            border: none;
+            margin-left: 50px;
+        }
+
+        #button {
+            margin-top: 13px;
+            width: 200px;
+            height: 30px;
+            line-height: 30px;
+            margin-left: 50px;
+            border-radius: 5px;
+            background-color: #337bb7;
+            border: none;
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="login_check.php">
+        <div class="main">
+            <h2>图书管理系统登录</h2>
+            <input type="text" placeholder="请输入账号" name="admin_name">
+            <input type="password" placeholder="请输入密码" name="admin_psd">
+            <input type="submit" value="点击登录" id="button">
+        </div>
+    </form>
+    <script>
+        let input = document.querySelectorAll('input')
+        let button = document.querySelector('#button')
+        button.addEventListener('click', function () {
+            for (let i = 0; i < input.length; i++) {
+                if (input[i].value == '') {
+                    alert('请输入您的账号或密码')
+                    break
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

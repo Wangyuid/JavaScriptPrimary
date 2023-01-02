@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全选按钮</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th><input type="checkbox" id="all"><span>全选</span></th>
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="ck"></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="ck"></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="ck"></td>
+        </tr>
+    </table>
+    <script>
+        //获取元素
+        let all = document.querySelector('#all')
+        let cks = document.querySelectorAll('#ck')
+        let span = document.querySelector('span')
+        //设置事件监听
+        all.addEventListener('click', function () {
+            for (let i = 0; i < cks.length; i++) {
+                cks[i].checked = all.checked
+            }
+            if (all.checked === true) {
+                span.innerHTML = '取消全选'
+            } else {
+                span.innerHTML = '全选'
+            }
+        })
+        //给全部的小按钮设置事件监听
+        for (let i = 0; i < cks.length; i++) {
+            cks[i].addEventListener('click', function () {
+                // 点击一次小按钮,就要遍历全部
+                for (let j = 0; j < cks.length; j++) {
+                    if (cks[j].checked === false) {
+                        all.checked = false
+                        span.innerHTML = '全选'
+                        return
+                    }
+                }
+                all.checked = true
+                span.innerHTML = '取消全选'
+            })
+        }
+    </script>
+</body>
+
+</html>

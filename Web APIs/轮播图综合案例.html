@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .img-box,
+        .pic {
+            display: block;
+            width: 300px;
+            height: 260px;
+            margin: 0 auto;
+        }
+
+        .tip {
+            width: 300px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img-box">
+        <img class="pic" src="./images/1.jpg" alt="">
+        <div class="tip">
+            <h3 class="text">我是狗</h3>
+        </div>
+    </div>
+    <script>
+        let data = [
+            {
+                imgSrc: './images/1.jpg',
+                title: '我是狗'
+            },
+            {
+                imgSrc: './images/2.jpg',
+                title: '你是狗'
+            },
+            {
+                imgSrc: './images/3.jpg',
+                title: '我是小狗'
+            },
+            {
+                imgSrc: './images/4.jpg',
+                title: '你是小狗'
+            },
+            {
+                imgSrc: './images/5.jpg',
+                title: '我是大狗'
+            },
+            {
+                imgSrc: './images/6.jpg',
+                title: '你是大狗'
+            }
+        ]
+        //获取元素
+        let pic = document.querySelector('.pic')
+        let text = document.querySelector('.text')
+        //记录图片张数
+        let i = 0
+        //开启定时器
+        setInterval(function () {
+            i++
+            pic.src = data[i].imgSrc
+            text.innerHTML = data[i].title
+            if (i === data.length - 1) {
+                i = - 1
+            }
+        }, 1000)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>求10以内的质数</title>
+</head>
+
+<body>
+    <script>
+        //输出提示
+         document.write('0~10的质数有:<br>');
+         //定义1~10的自然数循环
+            for(var i=1;i<=10;i++){
+                //定义count用于存储被整除次数
+                var count=0;
+                //定义1~本身数字的自然数
+                for(var a=1;a<=i;a++){
+                    //从1一直到自身进行整除判断
+                    if(i%a==0){
+                        //整除一次加1
+                        count++;
+                    }
+                }
+                //只有被1和自身整除才是质数所以从1~自身只能被整除2次才算
+                if(count==2){
+                //输出质数
+                    document.write(i+'<br>');
+                }
+            }
+        </script>
+</body>
+
+</html>

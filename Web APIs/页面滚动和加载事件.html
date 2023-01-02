@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面滚动和加载事件</title>
+    <style>
+        div {
+            height: 3000px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>ssssssssssssssssssssssssssssssssssssss</div>
+    <script>
+        let div = document.querySelector('div')
+        //滚动事件
+        window.addEventListener('scroll', function () {
+            console.log('111')
+        })
+        //整个页面加载事件
+        window.addEventListener('load', function () {
+
+        })
+        //DOM加载事件
+        document.addEventListener('DOMContentLoaded', function () {
+
+        })
+    </script>
+</body>
+
+</html>

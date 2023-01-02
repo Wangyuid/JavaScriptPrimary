@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间</title>
+    <style>
+        div {
+            width: 350px;
+            height: 50px;
+            background-color: pink;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        //获取元素
+        let div = document.querySelector('div')
+        //定义数组
+        let arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+        //先调用一次以防止一秒空白
+        getTime()
+        //设置定时器
+        setInterval(getTime, 1000)
+        function getTime() {
+            //实例化时间对象
+            let data = new Date()
+            //获取时间
+            let year = data.getFullYear()
+            let month = data.getMonth()
+            let date = data.getDate()
+            let hour = data.getHours()
+            let min = data.getMinutes()
+            let sec = data.getSeconds()
+            let day = data.getDay()
+            //写入数据
+            div.innerHTML = `今天是：${year}年${month + 1}月${date}日 ${hour}时${min}分${sec}秒 ${arr[day]}`
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机背景</title>
+    <style>
+        body {
+            background-image: url(./images/1.jpg);
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // function getRandom(min, max) {
+        //     return Math.floor(Math.random() * (max - min + 1) + min)
+        // }
+        // let random = getRandom(1, 6)
+        // console.log(random);
+        // let bc = document.querySelector('body')
+        // bc.style.backgroundImage = `url(./images/${random}.jpg)`
+
+        //body是例外，可以不用获取直接使用
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+        let random = getRandom(1, 6)
+        console.log(random)
+        document.body.style.backgroundImage = `url(./images/${random}.jpg)`
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 251px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./images/1.jpg" alt="">
+    <script>
+        //获取元素
+        let pic = document.querySelector('img')
+        //封装函数
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+        let random = getRandom(1, 6)
+        //更改属性
+        pic.src = `./images/${random}.jpg`
+    </script>
+</body>
+
+</html>

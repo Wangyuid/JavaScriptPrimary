@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>仿新浪返回顶部</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            position: relative;
+            height: 3000px;
+            width: 600px;
+            background-color: green;
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: none;
+            position: absolute;
+            width: 80px;
+            height: 60px;
+            background-color: red;
+            top: 900px;
+            left: 1060px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main"></div>
+    <div class="btn">
+        <div class="top">返回顶部</div>
+        <a href="#">关闭</a>
+    </div>
+    <script>
+        let main = document.querySelector('.main')
+        let btn = document.querySelector('.btn')
+        document.addEventListener('scroll', function () {
+            if (document.documentElement.scrollTop >= 500) {
+                btn.style.display = 'block'
+            } else {
+                btn.style.display = 'none'
+            }
+        })
+        btn.children[0].addEventListener('click', function () {
+            let local = document.documentElement.scrollTop
+            local = 0
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电梯导航案例</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .aside {
+            width: 60px;
+            height: 100px;
+            position: fixed;
+            top: 200px;
+            left: 0;
+        }
+
+        .content {
+            height: 2000px;
+        }
+
+        .item {
+            width: 60px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            background-color: #e1d0d0;
+            margin-top: 2px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .neirong {
+            width: 500px;
+            height: 300px;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+
+        .a {
+            background-color: red;
+            margin-top: 100px;
+        }
+
+        .b {
+            background-color: yellow;
+        }
+
+        .c {
+            background-color: blue;
+        }
+
+        .d {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="aside">
+        <div class="item red">红</div>
+        <div class="item">黄</div>
+        <div class="item">蓝</div>
+        <div class="item">绿</div>
+    </div>
+    <div class="content">
+        <div class="neirong a"></div>
+        <div class="neirong b"></div>
+        <div class="neirong c"></div>
+        <div class="neirong d"></div>
+    </div>
+    <script>
+        let items = document.querySelectorAll('.item')
+        let neirongs = document.querySelectorAll('.neirong')
+        for (let i = 0; i < items.length; i++) {
+            //给每个元素设置事件监听
+            items[i].addEventListener('click', function () {
+                document.querySelector('.aside .red').classList.remove('red')
+                this.classList.add('red')
+                document.documentElement.scrollTop = neirongs[i].offsetTop
+            })
+        }
+    </script>
+</body>
+
+</html>

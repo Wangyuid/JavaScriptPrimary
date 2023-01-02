@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>检测页面滚动距离</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        window.addEventListener('scroll', function () {
+            let num = document.documentElement.scrollTop
+            console.log(num)
+            //scrollTop是可以进行修改赋值的,不带单位
+            document.documentElement.scrollTop = 500
+        })
+    </script>
+</body>
+
+</html>

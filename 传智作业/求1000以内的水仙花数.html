@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>求1000以内的水仙花数</title>
+</head>
+
+<body>
+    <script>
+        /*js实现：循环输出1000以内水仙花数*/
+        var a, b, c;
+        for (i = 100; i < 1000; i++) {
+            var a = parseInt(i % 10);  //个位数
+            var b = parseInt((i / 10) % 10);  //十位数
+            var c = parseInt(i / 100);   //千位数
+            if (a * a * a + b * b * b + c * c * c == i) {
+                document.write(i + "是水仙花数" + "<br/>");
+            }
+        }
+    </script>
+</body>
+
+</html>

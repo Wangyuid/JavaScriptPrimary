@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组方式</title>
+</head>
+
+<body>
+    省份：<select name="" id="province">
+        <option value="">请选择</option>
+    </select>
+    城市：<select name="" id="city">
+        <option value="">请选择</option>
+    </select>
+    <script>
+        window.onload = function () {
+            let province = document.querySelector('#province')
+            let city = document.querySelector('#city')
+            //数组格式的数据
+            let provinceList = ['四川省', '云南省', '贵州省', '广东省']
+            let cityList = [
+                ['成都市', '绵阳市', '广元市', '德阳市'],
+                ['昆明市', '大理市', '丽江市'],
+                ['贵阳市', '遵义市'],
+                ['广州市', '佛山市', '深圳市', '珠海市']
+            ]
+            for (let i = 0; i < provinceList.length; i++) {
+                province.innerHTML += `<option>${provinceList[i]}</option>`
+            }
+            province.onchange = function () {
+                //数组方式
+                let index = province.selectedIndex
+                city.innerHTML = `<option>请选择</option>`
+                if (index) {
+                    for (let i = 0; i < cityList[index - 1].length; i++) {
+                        city.innerHTML += `<option>${cityList[index - 1][i]}</option>`
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

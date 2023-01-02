@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //打印0~20到控制台
+        // let i = 0
+        // while (i <= 20) {
+        //     console.log(i)
+        //     i++
+        // }
+        //计算1~1000的和
+        // let i = 1
+        // let sum = 0
+        // while (i <= 1000) {
+        //     sum += i
+        //     i++
+        // }
+        // document.write(sum)
+        //计算1到用户输入的数的累加和
+        // let i = 1
+        // let sum = 0
+        // let number = +prompt('请您输入数字')
+        // while (i <= number) {
+        //     sum += i
+        //     i++
+        // }
+        // document.write(sum)
+        //登陆验证
+        while(true){
+            let user = prompt('请您输入用户名')
+            let password = prompt('请您输入密码')
+            if(user ==='admin' && password ==='admin'){
+                alert('登陆成功')
+                break
+            }
+            alert('请您重新输入')
+        }
+        </script>
+</body>
+
+</html>

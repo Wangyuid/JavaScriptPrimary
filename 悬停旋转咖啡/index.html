@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0d3462;
+        }
+
+        .stage {
+            margin: 100px auto;
+            width: 760px;
+            height: 220px;
+        }
+
+        .box {
+            width: 170px;
+            height: 190px;
+            margin: 10px;
+            float: left;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: linear 1s;
+        }
+
+        .front {
+            width: 170px;
+            height: 190px;
+            position: absolute;
+            backface-visibility: hidden;
+        }
+
+        .w {
+            width: 174px;
+            height: 194px;
+        }
+
+        img {
+            width: 170px;
+            height: 190px;
+
+        }
+
+        .back {
+            width: 170px;
+            height: 190px;
+            position: absolute;
+            border: 2px solid #fff;
+            box-sizing: content-box;
+            z-index: -1;
+            transform: rotateY(180deg);
+        }
+
+        .box:hover {
+            transform: rotateY(180deg);
+            /* pointer-events: none; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stage">
+        <div class="box ">
+            <div class="front"><img src="./img/屏幕截图 2022-09-28 111956.png" alt="" class="w"></div>
+            <div class="back"><img src="./img/浓缩咖啡.jpg" alt=""></div>
+        </div>
+        <div class="box ">
+            <div class="front"><img src="./img/屏幕截图 2022-09-28 112030.png" alt="" class="w"></div>
+            <div class="back"><img src="./img/浓缩咖啡.jpg" alt=""></div>
+        </div>
+        <div class="box ">
+            <div class="front"><img src="./img/屏幕截图 2022-09-28 112103.png" alt="" class="w"></div>
+            <div class="back"><img src="./img/浓缩咖啡.jpg" alt=""></div>
+        </div>
+        <div class="box ">
+            <div class="front"><img src="./img/屏幕截图 2022-09-28 112122.png" alt="" class="w"></div>
+            <div class="back"><img src="./img/浓缩咖啡.jpg" alt=""></div>
+        </div>
+    </div>
+</body>
+
+</html>

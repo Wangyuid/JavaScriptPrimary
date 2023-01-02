@@ -1,0 +1,112 @@
+a {
+    color:#333333;
+}
+/* 固定宽度居中 */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+/* 页头 */
+header {
+    height: 60px;
+    background: linear-gradient(to right,red,orange);
+    font-size: 1.2em;
+}
+.headBar {
+    display: flex;
+    align-items: center;
+}
+/* logo */
+.logo {
+    width: 145px;
+    height: 45px;
+    background: url(../image/logo.jpg) no-repeat center;
+    background-size: cover;
+}
+/*导航栏*/
+nav {width: 600px;}
+.navItem {
+    display: inline-block;
+    line-height: 60px;
+    padding: 0 20px;
+    color: #ffffff;
+}
+/* 当前选中的导航栏 */
+.navItem.active {
+    background: #555555;
+    font-weight: 700;
+}
+/*搜索框*/
+.search-wrap input {
+    border: 0;
+    width: 15rem;
+    line-height: 1.75rem;
+    outline-style: none;
+    padding-left: 0.625rem;
+    border-radius: 5px;
+    }
+    .search-wrap button {
+        width: 3.125rem;
+        height: 1.75rem;
+        border: 0;
+        background-color: #555555;
+        color: #ffffff;
+        border-radius: 5px;
+    }
+/* 网站介绍 */
+.fiction-text {
+    column-count: 2;
+    column-gap: 40px;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+    padding: 0 70px;
+    margin-top: 40px;
+}
+/*介绍标题*/
+.fiction-text h1 {
+    column-span: all;
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* iframe区域 */
+.iframeWrap {
+    width: 100%;
+    overflow: hidden;
+
+}
+iframe {
+    width: 103%;
+    height: 450px;
+}
+/*分页*/
+.pageWrap {
+    overflow: hidden;
+}
+ul.page {
+    margin: 20px 0;
+    float: right;
+}
+ul.page li {
+    display: inline;
+}
+ul.page li a {
+    padding: 8px 16px;
+    border: 1px solid #cccccc;
+}
+/*未访问的超链接*/
+ul.page li a:link {color: #333333;} /*巴访问的超链接去*/
+ul.page li a:visited {color: #333333; } /*户当鼠标悬停在超链接上时*/
+ul.page li a:hover {color: #FB6638;} /*被选择的超链接*/
+ul.page li a:active {color: #FB6638;}
+/*页脚*/
+footer {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #E9E9E9;
+    }
+    footer a {
+    margin: 0 20px;
+    }
+        

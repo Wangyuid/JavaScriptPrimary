@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机点名</title>
+</head>
+
+<body>
+    <script>
+        //声明随机数函数
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+        //声明数组
+        let arr = ['王宇', '孙全涛', '仇天嘉', '安文政', '佀祥坤', '玛卡巴卡', '乌斯迪斯', '天线宝宝', '敲里哇', '猫咪', '狗', '扫把', '拖把']
+        let random = getRandom(0, arr.length - 1)
+        document.write(arr[random])
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关闭多个二维码</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .button {
+            position: relative;
+            width: 300px;
+            height: 260px;
+            float: left;
+        }
+
+        .button {
+            position: absolute;
+            display: block;
+            width: 30px;
+            height: 30px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 243px;
+            margin-top: -248px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tupian">
+        <img src="./images/1.jpg" alt="">
+        <i class="button">x</i>
+    </div>
+    <div class="tupian">
+        <img src="./images/1.jpg" alt="">
+        <i class="button">x</i>
+    </div>
+    <div class="tupian">
+        <img src="./images/1.jpg" alt="">
+        <i class="button">x</i>
+    </div>
+    <div class="tupian">
+        <img src="./images/1.jpg" alt="">
+        <i class="button">x</i>
+    </div>
+    <script>
+        let btns = document.querySelectorAll('.button')
+        for (i = 0; i < btns.length; i++) {
+            btns[i].addEventListener('click', function () {
+                this.parentNode.style.display = 'none'
+            })
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阻止事件冒泡</title>
+    <style>
+        .father {
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+        }
+
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <script>
+        //冒泡触发的是父元素的同种类型事件
+        let fat = document.querySelector('.father')
+        let son = document.querySelector('.son')
+        //mouseover，mouseout存在冒泡行为
+        // fat.addEventListener('mouseover', function () {
+        //     console.log('我是爸爸')
+        // })
+        //mouseenter，mouseleave没有冒泡行为
+        fat.addEventListener('mouseenter', function () {
+            console.log('我是爸爸')
+        })
+    </script>
+</body>
+
+</html>

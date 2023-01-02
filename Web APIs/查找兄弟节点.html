@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查找兄弟节点</title>
+</head>
+
+<body>
+    <button>点击</button>
+    <ul>
+        <li>1</li>
+        <li class="two">2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script>
+        let button = document.querySelector('button')
+        let lis = document.querySelector('.two')
+        button.addEventListener('click', function () {
+            lis.nextElementSibling.style.color = 'red'
+            lis.previousElementSibling.style.color = 'red'
+        })
+    </script>
+</body>
+
+</html>

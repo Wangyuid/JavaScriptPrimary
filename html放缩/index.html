@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            width: 600px;
+            height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            /* background-color: pink; */
+        }
+
+        .one,
+        .two,
+        .three {
+            float: left;
+            /* margin-right: 30px; */
+            /* overflow: hidden; */
+        }
+
+        a {
+            display: block;
+            width: 131px;
+            height: 174px;
+            overflow: hidden;
+        }
+
+        img {
+            transition: 1s;
+        }
+
+        img:hover {
+            transform: scale(1.2);
+        }
+
+        p {
+            text-align: center;
+            font-size: 14px;
+            color: darkgrey;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="one">
+            <a href="#"><img src="./img/未标题-1.jpg" alt=""></a>
+            <p>黑马程序员/编著</br>人民邮电出版社</p>
+        </div>
+        <div class="two">
+            <a href="#"><img src="./img/未标题-2.jpg" alt=""></a>
+            <p>黑马程序员/编著</br>人民邮电出版社</p>
+        </div>
+        <div class="three">
+            <a href="#"><img src="./img/未标题-3.jpg" alt=""></a>
+            <p>黑马程序员/编著</br>人民邮电出版社</p>
+        </div>
+    </div>
+</body>
+
+</html>

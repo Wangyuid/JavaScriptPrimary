@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>完整版随机点名</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .all {
+            width: 500px;
+            height: 450px;
+            margin: 0 auto;
+            background-color: green;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        button {
+            width: 100px;
+            height: 45px;
+            border-radius: 15px;
+        }
+
+        .artical,
+        .start,
+        .end {
+            margin-top: 110px;
+        }
+
+        .start {
+            margin-left: 20px;
+        }
+
+        .end {
+            margin-right: 20px;
+        }
+
+        .button,
+        .artical {
+            width: 500px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .artical {
+            font-size: 26px;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .name {
+            width: 300px;
+            background-color: #fff;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <h2>随机点名</h2>
+        <div class="artical">
+            <span>名字是:</span>
+            <div class="name"></div>
+        </div>
+        <div class="button">
+            <button class="start">开始</button>
+            <button class="end">结束</button>
+        </div>
+    </div>
+    <script>
+        //获取元素
+        let box = document.querySelector('.name')
+        let button = document.querySelector('.start')
+        let button2 = document.querySelector('.end')
+        //声明随机数函数
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+        //声明数组
+        let arr = ['王宇', '孙全涛', '仇天嘉', '安文政', '佀祥坤', '玛卡巴卡', '乌斯迪斯', '天线宝宝', '敲里哇', '猫咪', '狗', '扫把', '拖把']
+        let time = 0
+        let random = 0
+        //按钮1设置事件监听
+        button.addEventListener('click', function () {
+            time = setInterval(function () {
+                random = getRandom(0, arr.length - 1)
+                box.innerHTML = arr[random]
+            }, 50)
+        })
+        //按钮2设置事件监听
+        button2.addEventListener('click', function () {
+            clearInterval(time)
+            arr.splice(random, 1)
+            if (arr.length === 0) {
+                button.disabled = button2.disabled = true
+            }
+        })
+    </script>
+</body>
+
+</html>

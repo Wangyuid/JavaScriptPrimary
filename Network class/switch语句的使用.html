@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch语句</title>
+</head>
+
+<body>
+    <script>
+        // switch (3) {
+        //     case 1:
+        //         alert(1)
+        //         break
+        //     case 2:
+        //         alert(2)
+        //         break
+        //     case 3:
+        //         alert(3)
+        //         break
+        //     default:
+        //         alert('没有数据')
+        // }
+        let num1 = +prompt('请输入第一个数')
+        let num2 = +prompt('请输入第二个数')
+        let cam = prompt('请输入运算符')
+        switch (cam) {
+            case '+' :
+                alert(`计算结果是${num1 + num2}`)
+                break
+            case '-' :
+            alert(`计算结果是${num1 - num2}`)
+                break
+            case '*' :
+            alert(`计算结果是${num1 * num2}`)
+                break
+            case '/' :
+            alert(`计算结果是${num1 / num2}`)
+                break
+            default:
+                document.write('请输入正确的运算符')
+        }
+    </script>
+</body>
+
+</html>

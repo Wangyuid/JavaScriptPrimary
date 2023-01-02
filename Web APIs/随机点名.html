@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: inline-block;
+            width: 150px;
+            height: 30px;
+            border: 1px solid pink;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 30px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    抽到的名字是：<div></div>
+    <script>
+        //获取元素
+        let box = document.querySelector('div')
+        //声明随机数函数
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+        //声明数组
+        let arr = ['王宇', '孙全涛', '仇天嘉', '安文政', '佀祥坤', '玛卡巴卡', '乌斯迪斯', '天线宝宝', '敲里哇', '猫咪', '狗', '扫把', '拖把']
+        let random = getRandom(0, arr.length - 1)
+        //写入标签内部
+        box.innerHTML = arr[random]
+        //之后删除抽到的名字
+        arr.splice(random, 1)
+    </script>
+</body>
+
+</html>

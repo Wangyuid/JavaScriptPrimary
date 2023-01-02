@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function getSum(arr) {
+        //     let sum = 0
+        //     for (i = 0; i < arr.length; i++) {
+        //         sum += arr[i]
+        //     }
+        //     document.write(sum)
+        // }
+        // getSum([1, 2, 3])
+        let array = []
+        for (i = 1; i < 4; i++) {
+            let g = +prompt('请输入您的分数')
+            array.push(g)
+            // console.log(array);
+        }
+        function getSum(arr) {
+            let sum = 0
+            for (i = 0; i < array.length; i++) {
+                sum += array[i]
+            }
+            document.write(sum)
+        }
+        getSum(array)
+        //封装好的计算函数
+
+    </script>
+</body>
+
+</html>

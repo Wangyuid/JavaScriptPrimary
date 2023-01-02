@@ -1,0 +1,45 @@
+*{margin: 0;padding: 0;}
+.wrapper{
+    width: 800px;
+    height: 280px;
+    border: 2px solid blue;
+    margin: 20px auto;
+    position: relative;
+}
+.wrapper img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.wrapper ul{
+    position: absolute;
+    left: 330px;
+    top: 240px;
+}
+.wrapper ul li{
+    list-style: none;
+    width: 24px;
+    height: 24px;
+    background: #0f0;
+    float: left;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+.wrapper div{
+    position: absolute;
+}
+.wrapper .preBtn{
+    width: 50px;
+    height: 100px;
+    top: 90px;
+    left: 0;
+    background: url(images/spirte.png) no-repeat 0 0;
+}
+.wrapper .nextBtn{
+    width: 50px;
+    height: 100px;
+    top: 90px;
+    right: 0;
+    background: url(images/spirte.png) no-repeat -50px 0;
+}

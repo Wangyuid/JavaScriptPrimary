@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单常用属性</title>
+</head>
+
+<body>
+    <input type="text" value="请输入">
+    <button disabled>按钮</button>
+    <input type="checkbox" name="" id="x">
+    <script>
+        //改变value值
+        let input = document.querySelector('input')
+        input.value = ''
+        //启用按钮
+        let btn = document.querySelector('button')
+        btn.disabled = false
+        //勾选复选框
+        let checkbox = document.querySelector('#x')
+        checkbox.checked = true
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D变换</title>
+    <style>
+        #stage {
+            width: 300px;
+            margin: 100px auto;
+            perspective: 100px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            float: left;
+            transition: linear 1s;
+            transform-style: preserve-3d;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .x:hover {
+            transform: rotateX(60deg)
+        }
+
+        .y:hover {
+            transform: rotateY(60deg);
+        }
+
+        .z:hover {
+            transform: rotateZ(60deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="stage">
+        <div class="box x"><img src="./img/屏幕截图 2022-09-28 110117.png" alt=""></div>
+        <div class="box y"><img src="./img/屏幕截图 2022-09-28 110117.png" alt=""></div>
+        <div class="box z"><img src="./img/屏幕截图 2022-09-28 110117.png" alt=""></div>
+    </div>
+</body>
+
+</html>

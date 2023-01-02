@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: inline-block;
+            width: 150px;
+            height: 30px;
+            border: 1px solid pink;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 30px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    本期幸运号码为:<div></div>
+    <script>
+        //获取元素
+        let box = document.querySelector('div')
+        //声明随机数函数
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+        //声明数组
+        let arr = []
+        function getArray() {
+            //从1~36中随机选出七个数字
+            for (let i = arr.length; i < 7; i++) {
+                let random = getRandom(1, 36)
+                arr.push(random)
+            }
+            //数组去重
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = i + 1; j < arr.length; j++) {
+                    if (arr[i] === arr[j]) {
+                        arr.splice(j, 1)
+                        j--
+                    }
+                }
+            }
+            return arr
+        }
+        while (true) {
+            if (getArray().length === 7) {
+                break
+            } else {
+                arr.push(getRandom(1, 36))
+            }
+        }
+        //写入标签内部
+        box.innerHTML = getArray()
+    </script>
+</body>
+
+</html>

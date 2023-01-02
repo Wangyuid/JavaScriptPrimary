@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节日倒计时</title>
+    <style>
+        div {
+            display: inline-block;
+            width: 350px;
+            height: 50px;
+            background-color: pink;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    距离2030年1月1日还有:<div></div>天
+    <script>
+        //获取元素
+        let div = document.querySelector('div')
+        //实例化时间对象
+        let date = new Date()
+        let now = date.getTime()
+        let date2 = new Date('2030-1-1')
+        let later = date2.getTime()
+        let remain = later - now
+        let day = parseInt(remain / (1000 * 60 * 60 * 24))
+        //写入标签
+        div.innerHTML = `
+        ${day}
+        `
+    </script>
+</body>
+
+</html>

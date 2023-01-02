@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //声明随机数函数
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+        // 生成1~10之间的随机数
+        let random = getRandom(1, 10)
+        while (true) {
+            let num = +prompt('请您输入一个数字：')
+            if (num > random) {
+                alert('您输入的数字大了！')
+            } else if (num < random) {
+                alert('您输入的数字小了！')
+            } else {
+                alert('恭喜您猜对了！')
+                break
+            }
+        }
+    </script>
+</body>
+
+</html>

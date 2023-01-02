@@ -1,0 +1,15 @@
+/* 边距初始化 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 超链接样式初始化，取消默认下划线 */
+a {
+    text-decoration: none;
+}
+
+/* <li>标签样式初始化 取消默认<li>标签前面的符号 */
+ul li {
+    list-style: none;
+}

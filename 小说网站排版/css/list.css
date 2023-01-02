@@ -1,0 +1,53 @@
+/*小说列表*/
+.fictionBox {
+    border: 1px solid #CCCCCC;
+    padding: 20px 20px 0;
+    margin: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+/* 图文信息*/
+.fictionBox article {
+    width: 500px;
+    height: 130px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+/* 小说图片 */
+.fictionImg {
+    width: 100px;
+    height: 130px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, .5);
+}
+
+.fictionImg img {
+    width: 100px;
+    height: 130px;
+}
+
+/* 全部文字信息 */
+.fictionInfo {
+    height: 140px;
+    margin-left: 15px;
+    overflow: hidden;
+}
+
+/* 小说标题 */
+.fictionInfo h3 {
+    margin-top: 5px;
+}
+
+/* 小说内容介绍 */
+.fictionTip {
+    font-size: 13px;
+    color: #555555;
+}
+
+.fictionTip span {
+    margin: 0 8px;
+    line-height: 35px;
+}

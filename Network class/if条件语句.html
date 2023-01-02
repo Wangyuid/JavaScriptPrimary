@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // if (true) {
+        //     alert(666)
+        // 0 false undefined null ''都为假
+        // }
+        // let grade = +prompt('请输入您的高考成绩')
+        // if (grade > 700) {
+        //     alert('恭喜考上心仪大学!')
+        // } else {
+        //     alert('很遗憾，您没有考上')
+        // }
+        // let year = +prompt('请输入年份')
+        // if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+        //     alert(`${year}是闰年`)
+        // } else {
+        //     alert(`${year}是平年`)
+        // }
+        let time = +prompt('请输入时间')
+        if (time <= 12) {
+            alert('上午好！')
+        } else if (time <= 18) {
+            alert('下午好！')
+        } else if (time <= 20) {
+            alert('晚上好！')
+        }else{
+            alert('已经太晚了，该睡觉啦！')
+        }
+    </script>
+</body>
+
+</html>

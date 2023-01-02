@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三大家族</title>
+    <style>
+        div {
+            width: 150px;
+            height: 150px;
+            background-color: pink;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        我有很多内容哦
+        我有很多内容哦
+        我有很多内容哦
+        我有很多内容哦
+        我有很多内容哦
+        我有很多内容哦
+        我有很多内容哦
+        我有很多内容哦
+        我有很多内容哦
+        我有很多内容哦
+        我有很多内容哦
+        我有很多内容哦
+        我有很多内容哦
+        我有很多内容哦
+        我有很多内容哦
+        我有很多内容哦
+    </div>
+    <script>
+        let div = document.querySelector('div')
+        //scrollWidth 和 scrollHeight 是 内容 的宽高
+        //scrollTop 和 scrollLeft是可以进行修改的
+        console.log(div.scrollWidth)
+        console.log(div.scrollHeight)
+        console.log('----------------')
+        //offset家族获取的是 盒子元素 的宽高
+        //offsetTop 和 offsetLeft是只读的
+        console.log(div.offsetWidth)
+        console.log(div.offsetHeight)
+        console.log('----------------')
+        //client家族获取的是可见内容的宽高，不包括滚动条，边框等(当前可视区域)
+        //clientTop 和 clientLeft是只读的，获取的是边框宽度
+        console.log(div.clientWidth)
+        console.log(div.clientHeight)
+    </script>
+</body>
+
+</html>

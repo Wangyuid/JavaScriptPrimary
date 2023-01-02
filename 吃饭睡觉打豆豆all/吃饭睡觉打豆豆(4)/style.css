@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #cdcdcd;
+}
+
+#header {
+    height: 50px;
+    background-color: #323232;
+}
+
+.content {
+    width: 54%;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content a {
+    color: #cdcdcd;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.content input {
+    flex: 0.6;
+    height: 24px;
+    border-radius: 6px;
+    outline: none;
+    padding-left: 10px;
+}
+
+#todolist {
+    width: 54%;
+    margin: 10px auto;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.head span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #e6e6fa;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+ul li {
+    background-color: #fff;
+    height: 40px;
+    border-radius: 6px;
+    border-left: 5px solid #629a9c;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10px;
+}
+
+ul li input {
+    width: 18px;
+    height: 18px;
+}
+
+ul li p {
+    flex: 0.92;
+}
+
+ul li a {
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: 6px double #fff;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+.finished ul {
+    opacity: 0.7;
+}
+
+.finished ul li {
+    border-left: 5px solid #999;
+}

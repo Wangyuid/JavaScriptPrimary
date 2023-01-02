@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaweb项目作业</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            background-image: linear-gradient(to bottom right, rgb(114, 135, 254), rgb(130, 88, 186));
+        }
+
+        #main {
+            width: 500px;
+            height: 300px;
+            border: 1px solid white;
+            margin: 160px auto;
+            border-radius: 20px;
+            background-image: linear-gradient(to bottom right, rgb(114, 135, 254), rgb(130, 88, 186));
+        }
+
+        h2 {
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        input {
+            border: 0;
+            background: none;
+            outline: none;
+            color: #fff;
+            display: block;
+            transition: .2s;
+            border-bottom: 1px solid rgb(199, 191, 219);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <h2>登录</h2>
+        <form action="">
+            <input type="text" name="username" placeholder="请输入账号">
+            <input type="password" name="password" placeholder="请输入密码">
+            <input type="text" name="number" placeholder="请输入验证码">
+            <p>验证码</p>
+            <input type="submit" value="登录">
+        </form>
+    </div>
+</body>
+
+</html>

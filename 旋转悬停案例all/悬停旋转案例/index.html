@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            margin: 0 auto;
+            margin-top: 10px;
+            position: relative;
+            width: 70px;
+            height: 140px;
+            overflow: hidden;
+        }
+
+        .one,
+        .two {
+            display: inline-block;
+            position: absolute;
+        }
+
+        .one:hover+.two {
+            transform: rotate(0deg);
+            transition: all 1.5s;
+            pointer-events: none;
+        }
+
+        .two {
+            transform: rotate(90deg);
+            transform-origin: -71px 71px;
+        }
+
+        img {
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="one">
+            <a href="#"> <img src="./img/transition1.png" alt=""></a>
+        </div>
+        <div class="two">
+            <a href="#"> <img src="./img/transition2.png" alt=""></a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 获取匹配的第一个元素 -->
+    <div>我是一个盒子</div>
+    <div class="one">我也是</div>
+    <script>
+        let div = document.querySelector('div')
+        console.log(div)
+        let one = document.querySelector('.one')
+        console.log(one)
+    </script>
+    <!-- 获取匹配的多个元素 -->
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        let ul = document.querySelectorAll('ul li')
+        console.log(ul)
+        //通过遍历获取每个对象
+        for (i = 0; i < ul.length; i++) {
+            console.log(ul[i])
+        }
+    </script>
+</body>
+
+</html>

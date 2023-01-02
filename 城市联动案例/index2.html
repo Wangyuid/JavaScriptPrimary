@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json方式</title>
+</head>
+
+<body>
+    省份：<select name="" id="province">
+        <option value="">请选择</option>
+    </select>
+    城市：<select name="" id="city">
+        <option value="">请选择</option>
+    </select>
+    <script>
+        window.onload = function () {
+            let provinceEle = document.querySelector('#province')
+            let cityEle = document.querySelector('#city')
+            //json格式的数据
+            let city = [
+                { 'name': '四川省', 'info': ['成都市', '绵阳市', '广元市', '德阳市'] },
+                { 'name': '云南省', 'info': ['昆明市', '大理市', '丽江市'] },
+                { 'name': '贵州省', 'info': ['贵阳市', '遵义市'] },
+                { 'name': '广东省', 'info': ['广州市', '佛山市', '深圳市', '珠海市'] },
+            ]
+            for (let i = 0; i < city.length; i++) {
+                provinceEle.innerHTML += `<option>${city[i].name}</option>`
+            }
+            function loadCityByJson() {
+                let provinceName = provinceEle.value
+                for (let i in city) {
+                    if (city[i].name == provinceName) {
+                        for (let j = 0; j < city[i].info.length; j++) {
+                            cityEle.innerHTML += `<option>${city[i].info[j]}</option>`
+                        }
+                    }
+                }
+            }
+            provinceEle.onchange = function () {
+                loadCityByJson()
+            }
+        }
+    </script>
+</body>
+
+</html>

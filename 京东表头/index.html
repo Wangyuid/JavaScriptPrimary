@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东表头</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            height: 50px;
+            background-color: #c82519;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .btn {
+            width: 30px;
+            height: 30px;
+            background: url(./image/下载.png) no-repeat center center;
+            background-size: 22px;
+        }
+
+        .content {
+            width: 500px;
+            height: 30px;
+            background-color: #fff;
+            border-radius: 15px;
+            flex: 0.95;
+            display: flex;
+            align-items: center;
+        }
+
+        .jdlogo {
+            width: 30px;
+            height: 30px;
+            background: url(./image/jd-sprites.png) no-repeat 7px 8px;
+            background-size: 200px;
+            border-right: 2px solid #ccc;
+        }
+
+        .fdj {
+            width: 23px;
+            height: 30px;
+            background: url(./image/jd-sprites.png) no-repeat -79px 9px;
+            background-size: 200px;
+        }
+
+        .content input {
+            border: 0;
+            outline-style: none;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <span class="btn"></span>
+        <div class="content">
+            <span class="jdlogo"></span>
+            <span class="fdj"></span>
+            <input type="text" placeholder="剁手双十一">
+        </div>
+        <a href="#">登录</a>
+    </div>
+</body>
+
+</html>

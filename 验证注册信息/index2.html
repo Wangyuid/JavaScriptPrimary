@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        .left {
+            width: 100px;
+        }
+
+        .center {
+            width: 170px;
+        }
+
+        .right {
+            width: 230px;
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" id="myform">
+        <table border="0">
+            <tr>
+                <td class="left">用户名：</td>
+                <td class="center"><input type="text" id="user"></td>
+                <td class="right">
+                    <div id="user_prompt"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="left">密码：</td>
+                <td class="center"><input type="password" id="pwd"></td>
+                <td class="right">
+                    <div id="pwd_prompt"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="left">确认密码：</td>
+                <td class="center"><input type="password" id="rePwd"></td>
+                <td class="right">
+                    <div id="rePwd_prompt"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="left">电子邮箱：</td>
+                <td class="center"><input type="text" id="email"></td>
+                <td class="right">
+                    <div id="email_prompt"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="left">手机号码：</td>
+                <td class="center"><input type="text" id="number"></td>
+                <td class="right">
+                    <div id="number_prompt"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="注册" id="register">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function $(id) {
+            return document.getElementById(id)
+        }
+        function checkUser(userName) {
+            var result = ""
+            if (userName.length < 4 || userName.length > 16) {
+                result += "请输入4-16位用户名"
+            }
+            for (i = 0; i < userName.length; i++) {
+                if (!isNaN(userName.charAt(i))) {
+                    result += "不能包含数字"
+                    break
+                }
+            }
+            return result
+        }
+        function checkPwd(PwdName) {
+            var result = ""
+            if (PwdName.length < 4 || PwdName.length > 10) {
+                result += "密码由4-10位数字组成"
+            }
+            return result
+        }
+        function confirmPwd(rePwd, pwd) {
+            var result = ""
+            if (rePwd != pwd) {
+                result += "两次输入密码不一致"
+            }
+            return result
+        }
+        function checkEmail(emailName) {
+            var result = ""
+            var index = emailName.indexOf("@", 1)
+            if (index == -1) {
+                result = "输入的邮箱格式应该包含'@'符号"
+            }
+            if (emailName.indexOf(".", index) == -1) {
+                result = "输入的邮箱格式应该包含'.'符号，并且在'@'符号之后"
+            }
+            return result
+        }
+        function checkNumber(numberName) {
+            var result = ""
+            if (numberName.length < 11 || numberName.length > 11) {
+                result += "请输入11位数字号码"
+            }
+            return result
+        }
+        window.onload = function () {
+            var userEle = $("user")
+            userEle.onblur = function () {
+                $("user_prompt").innerHTML = checkUser(userEle.value)
+                // console.log(userEle.value);
+            }
+            var pwdEle = $("pwd")
+            pwdEle.onblur = function () {
+                $("pwd_prompt").innerHTML = checkPwd(pwdEle.value)
+            }
+            var rePwdEle = $("rePwd")
+            rePwdEle.onblur = function () {
+                $("rePwd_prompt").innerHTML = confirmPwd(rePwdEle.value, pwdEle.value)
+            }
+            var emailEle = $("email")
+            emailEle.onblur = function () {
+                $("email_prompt").innerHTML = checkEmail(emailEle.value)
+            }
+            var numberEle = $("number")
+            numberEle.onblur = function () {
+                $("number_prompt").innerHTML = checkNumber(numberEle.value)
+            }
+            var regEle = $("myform")
+            regEle.onsubmit = function () {
+                console.log("onsubmit");
+                return false
+            }
+        }
+    </script>
+</body>
+
+</html>

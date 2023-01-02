@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+        var book = [
+            {"boorsrc":"images/love.webp","bookID":"b001","nookName":"简爱","publish":"北京大学出版社","price":"32元"},
+            {"boorsrc":"images/oldman.webp","bookID":"b002","nookName":"老人与海","publish":"人民邮电出版社","price":"69元"},
+            {"boorsrc":"images/prince.webp","bookID":"b003","nookName":"小王子","publish":"中国石油大学出版社","price":"42元"}
+        ]
+        for(var i in book){
+            // 设置dom对象的属性
+            document.getElementById("pic"+i).innerHTML = book[i].boorsrc;
+            // 设置dom对象的内容
+            document.getElementById("bookID"+i).innerHTML = book[i].bookID;
+            document.getElementById("nookName"+i).innerHTML = book[i].nookName;
+            document.getElementById("publish"+i).innerHTML = book[i].publish;
+            document.getElementById("price"+i).innerHTML = book[i].price;
+
+        }
+    }
+    </script>
+    <style>
+        img{
+            width: 60px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>封面</th>
+            <th>图书编号</th>
+            <th>图书名</th>
+            <th>出版社</th>
+            <th>价格</th>        
+        </tr>
+        <tr>
+            <td id="book0">
+                <img  id="pic0" src="./img/love.webp" alt="简爱">
+            </td>
+            <td id="bookID0"></td>
+            <td id="nookName0"></td>
+            <td id="publish0"></td>
+            <td id="price0"></td>
+        </tr>
+        <tr>
+            <td id="book1">
+                <img  id="pic1" src="./img/oldman.webp" alt="老人与海">
+            </td>
+            <td id="bookID1"></td>
+            <td id="nookName1"></td>
+            <td id="publish1"></td>
+            <td id="price1"></td>
+        </tr>
+        <tr>
+            <td id="book2">
+                <img  id="pic2" src="./img/prince.webp" alt="简爱"> 
+            </td>
+            <td id="bookID2"></td>
+            <td id="nookName2"></td>
+            <td id="publish2"></td>
+            <td id="price2"></td>
+        </tr>
+        
+
+    </table>
+</body>
+</html>

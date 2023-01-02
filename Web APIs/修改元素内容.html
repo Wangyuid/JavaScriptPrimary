@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div>我是一个盒子</div>
+    <img src="./images/1.jpg" alt="">
+    <script>
+        let box = document.querySelector('div')
+        //innerText不会解析标签
+        // box.innerText = '有点意思'
+        // innerHTML会解析标签
+        box.innerHTML = '<h1>有点意思</h1>'
+        //修改元素的常用属性
+        let img = document.querySelector('img')
+        img.title = '我是一张图片'
+    </script>
+</body>
+
+</html>

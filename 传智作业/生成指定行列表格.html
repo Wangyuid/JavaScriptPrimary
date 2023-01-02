@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>生成指定行列表格</title>
+    <style type="text/css">
+    </style>
+</head>
+
+<body>
+    <h3>生成指定行列表格</h3>
+    行数 <input type="text" id="rows">
+    列数 <input type="text" id="cols">
+    <input type="button" value="创建表格" onclick="createTab()">
+    <div id="div1"></div>
+    <script>
+        function createTab() {
+            rows = document.getElementById('rows').value
+            cols = document.getElementById('cols').value
+            div1 = document.getElementById('div1')
+            var tab = '<table border=1 width=500">'
+            for (var i = 0; i < rows; i++) {
+                tab += '<tr height=50>'
+                for (var j = 0; j < cols; j++) {
+                    tab += "<td style='background:green'></td>"
+                }
+                tab += '</tr>'
+            }
+            tab += '</table>';
+            div1.innerHTML = tab
+        }
+    </script>
+</body>
+
+</html>

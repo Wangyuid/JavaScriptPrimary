@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>增加节点</title>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+    </ul>
+    <script>
+        //创建新节点
+        // let div = document.createElement('div')
+        // console.log(div)
+        let ul = document.querySelector('ul')
+        let li = document.createElement('li')
+        li.innerHTML = '我是小明'
+        //追加节点  父元素.appendChild(子元素) 后面追加
+        // ul.appendChild(li)
+        //追加节点 父元素.insertBefore(子元素，放到哪个元素的前面)
+        ul.insertBefore(li, ul.children[1])
+    </script>
+</body>
+
+</html>

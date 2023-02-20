@@ -5,15 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>search</title>
+    <title>reload</title>
 </head>
 
 <body>
-    <!-- search属性获得?后的数据 -->
-    <form action="target.html">
-        <input type="text" name="username">
-        <button>提交</button>
-    </form>
+    <button>刷新</button>
+    <script>
+        let btn = document.querySelector('button')
+        btn.addEventListener('click', function () {
+            location.reload()
+        })
+    </script>
 </body>
 
 </html>
